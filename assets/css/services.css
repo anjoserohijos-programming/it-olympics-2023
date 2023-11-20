@@ -1,0 +1,342 @@
+* {
+    cursor: url(../images/mouse-cursor.png), auto;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+body{
+    background-color: rgb(22, 37, 61);
+}
+/*content layer*/
+.content {
+    width: 100%;
+}
+
+#clippedBackground {
+    position: fixed;
+    z-index: -5;
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+/*content-navbar layer*/
+.content-navbar {
+    width: 20;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 4;
+    padding: 4px;
+}
+
+.content-navbar-logo {
+    display: flex;
+    align-items: center;
+    color: #4DB051;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#feu-alabang-logo {
+    width: 120px;
+    height: 120px;
+}
+@font-face {
+    font-family: dellaRobbiaBT;
+    src: url("../fonts/DellaRobbiaBTBold.ttf");
+}
+#feu-alabang-text-logo {
+   font-family: dellaRobbiaBT;
+   -webkit-text-stroke: .5px white;
+   font-weight: bold;
+   font-size: 30px;
+}
+
+.content-navbar-items {
+    width: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.content-navbar-items div {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 120px;
+    border-radius: 5px;
+    color: #4DB051;
+    font-size: 20px;
+    font-weight: lighter;
+    transition: .6s all ease-in-out;
+}
+
+.content-navbar-items div:hover {
+    height: 60px;
+    width: 180px;
+    background-color: #4DB051;
+    color: white;
+    font-weight: lighter;
+
+    transition: .2s all ease-in-out;
+}
+#check{
+    display: none;
+}
+
+#check:checked ~ .content-navbar-items{
+    display: none;
+}
+.checkBtn {
+    display: none;
+}
+
+@media(orientation: portrait) {
+
+    .content-navbar-logo {
+        display: flex;
+        justify-content: center;
+        color: #4DB051;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .content-navbar{
+        display: block;
+    }
+    .content-navbar-items{
+        display: block;
+        margin: 0 auto;
+        
+    }
+    .content-navbar-items a{
+        margin: 0 auto;
+
+    }
+    .content-navbar-items a div{
+        margin: 0 auto;
+        padding: auto;
+        width: 100%;
+    }
+    .checkBtn{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media(max-aspect-ratio: 16/9) {
+
+}
+
+.content-services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-services-title {
+    color: #4DB051;
+}
+
+.content-services h1 {
+    font-family: dellaRobbiaBT;
+    font-size: 100px;
+}
+.content-subtitle{
+    font-size: 30px;
+    font-family: dellaRobbiaBT;
+}
+.content-title{
+    color: #4DB051;
+}
+.content-section{
+    width: 100vh;
+    height: 270vh;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.content-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-title p{
+    font-size: 25px;
+    font-family: dellaRobbiaBT;
+}
+
+.content-sections{
+    width: 140vh;
+    height: 400vh;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 50px;
+}
+
+.content-section-1{
+    height: 60vh;
+    background-image: url("../images/core-values-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.39);
+    border-radius: 20px;
+}
+
+.content-section-1 h2{
+    font-family: dellaRobbiaBT;
+    font-size: 60px;
+}
+
+
+.content-section-1 h4{
+    font-family: dellaRobbiaBT;
+    font-size: 30px;
+}
+
+.content-section-2 {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.content-section-2 h2 {
+    font-size: 40px;
+}
+
+.content-section-2 p{
+    font-size: 20px;
+}
+.content-section-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-section-selectors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 120vh;
+    height: 40vh;
+
+}
+
+.content-section-selector {
+    height: 300px;
+    width: 200px;
+    margin: 25px;
+    box-shadow: 5px 5px 20px black;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .2s all ease-in-out;
+}
+
+.content-section-selector:hover .intro {
+    height: 200px;
+    transition: .1s ease-in-out;
+}
+
+.content-section-selector:hover p {
+    opacity: 1;
+    transition: .2s ease-in-out;
+}
+
+.intro {
+    height: 70px;
+    width: 200px;
+    background-color: rgba(0, 100, 50, 0.747);
+    box-sizing: border-box;
+    padding: 5px;
+    position: absolute;
+    bottom: -90vh;
+    border-bottom-left-radius: 20px;
+    color: rgb(251, 255, 0);
+    border-bottom-right-radius: 20px;
+    transition: .5s ease-in-out;
+}
+
+.intro p {
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+.intro h1 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#bigbluebutton{
+    background-image: url("../images/bigbluebutton-image.jpg");
+    background-size: cover;
+}
+
+#microsoft-teams{
+    background-image: url("../images/microsoft-teams-image.jpg");
+    background-size: cover;
+}
+
+#canvas{
+    background-image: url("../images/canvas-image.jpg");
+    background-size: cover;
+}
+#office365{
+    background-image: url("../images/office-365-image.jpg");
+    background-size: cover;
+}
+.content-section-4{
+    width: 100%;
+    height: 80vh;
+    background-image: url("../images/about-us-pattern-bg.png");
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.39);
+    border-radius: 20px;
+}
+.content-section-4 img{
+    background-image: url("../images/about-us-pattern-bg.png");
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 50px;
+}
+
+.content-section-details{
+    width: 40vh;
+}
+.content-section-details h2{
+    font-size: 40px;
+}
+
+.content-section-details p{
+    font-size: 30px;
+}
